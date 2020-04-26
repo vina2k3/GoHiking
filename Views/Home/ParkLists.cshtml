@@ -1,0 +1,37 @@
+﻿@model GoHiking.Models.ParkLists
+
+<h1>Parks</h1>
+<hr />
+
+@foreach (var item in Model.data)
+{
+    <div>
+        <h3>
+            @Html.DisplayFor(modelItem => item.fullName)
+        </h3>
+        <div>
+            <h6>Weather Infromation: </h6>
+            @Html.DisplayFor(modelItem => item.weatherInfo)
+        </div>
+        <div>
+            <h6>Operating Hours: </h6>
+            @Html.DisplayFor(modelItem => item.operatingHours)
+        </div>
+        <div>
+            <h6>Entrance Fees: </h6>
+            @Html.DisplayFor(modelItem => item.entranceFees)
+        </div>
+        <div>
+            <h5>Directions: </h5>
+            @Html.DisplayFor(modelItem => item.directionsInfo)
+        </div>
+        <a href="@item.url" target="_blank">
+            @Html.DisplayFor(modelItem => item.url)
+        </a>
+    </div>
+    <br />
+}
+
+<script>
+    alertDbSave(@ViewBag.dbSuccessComp);
+</script>
