@@ -1,4 +1,4 @@
-﻿@model GoHiking.Models.ParkLists
+﻿@model  GoHiking.Models.ParkLists
 
 <h1>Parks</h1>
 <hr />
@@ -12,10 +12,6 @@
         <div>
             <h6>Weather Infromation: </h6>
             @Html.DisplayFor(modelItem => item.weatherInfo)
-        </div>
-        <div>
-            <h6>Operating Hours: </h6>
-            @Html.DisplayFor(modelItem => item.operatingHours)
         </div>
         <div>
             <h6>Entrance Fees: </h6>
@@ -32,6 +28,3 @@
     <br />
 }
 
-<script>
-    alertDbSave(@ViewBag.dbSuccessComp);
-</script>
